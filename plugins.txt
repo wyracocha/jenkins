@@ -2,6 +2,15 @@ git
 matrix-auth
 maven-plugin
 blueocean
+docker-plugin
+docker-java-api
+docker-workflow
+docker-commons
+docker-build-step
+rancher
+amazon-ecr
+azure-acs
+image-tag-parameter
 kubernetes
 kubernetes-credentials
 kubernetes-client-api
