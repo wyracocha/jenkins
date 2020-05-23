@@ -1,13 +1,13 @@
-FROM jenkins/jenkins:latest
+FROM jenkins/jenkins
 
 # install jenkins plugins
-COPY ./plugins /usr/share/jenkins/plugins
-RUN while read i ; \ 
-		do /usr/local/bin/install-plugins.sh $i ; \
-	done < /usr/share/jenkins/plugins
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 ENV JENKINS_USER ${JENKINS_USER}
-ENV JENKINS_PASS ${JENKINS_USER}
+ENV JENKINS_PASS ${JENKINS_PASS}
+ENV PLUGINS_FORCE_UPGRADE true
+ENV TRY_UPGRADE_IF_NO_MARKER true
 
 # allows to skip Jenkins setup wizard
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false

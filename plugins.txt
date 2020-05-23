@@ -1,0 +1,12 @@
+git
+matrix-auth
+maven-plugin
+blueocean
+kubernetes
+kubernetes-credentials
+kubernetes-client-api
+kubernetes-cli
+kubernetes-credentials-provider
+kubernetes-cd
+kubernetes-pipeline-devops-steps
+nirmata
